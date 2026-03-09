@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { Toaster } from "@/components/ui/sonner";
 import Login from './pages/Login';
+import LandingPage from './pages/LandingPage';
 import StudentDashboard from './pages/StudentDashboard';
 import TeacherDashboard from './pages/TeacherDashboard';
 import AdminDashboard from './pages/AdminDashboard';
@@ -15,6 +16,7 @@ function App() {
     <AuthProvider>
       <div className="App">
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route
             path="/student/dashboard"
@@ -56,7 +58,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/" element={<Navigate to="/login" replace />} />
         </Routes>
         <Toaster />
       </div>
