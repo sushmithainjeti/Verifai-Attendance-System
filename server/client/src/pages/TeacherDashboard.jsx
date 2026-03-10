@@ -8,7 +8,6 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
 import api from '../services/api';
-import DashboardNav from '../components/DashboardNav';
 import { BookOpen, Users, Calendar, Video, BarChart3, X, ArrowLeft } from "lucide-react";
 
 const StatCard = ({ label, value, icon: Icon, colorClass, iconClass, iconColor }) => (
