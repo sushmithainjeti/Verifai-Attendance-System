@@ -438,7 +438,7 @@ const AdminDashboard = () => {
                             <TableCell>{c.name}</TableCell>
                             <TableCell style={{color:'rgba(255,255,255,0.5)'}}>{c.department}</TableCell>
                             <TableCell style={{color:'rgba(255,255,255,0.5)'}}>Y{c.year} · {c.section}</TableCell>
-                            <TableCell style={{color:'rgba(255,255,255,0.5)'}}>{c.teacher?.name||'Unassigned'}</TableCell>
+                            <TableCell style={{color:'rgba(255,255,255,0.5)'}}>{c.teacherId?.name||'Unassigned'}</TableCell>
                             <TableCell className="text-right"><Button variant="ghost" size="sm" onClick={()=>handleDeleteCourse(c._id)}><Trash2 className="w-4 h-4 text-red-400"/></Button></TableCell>
                           </TableRow>
                         );
